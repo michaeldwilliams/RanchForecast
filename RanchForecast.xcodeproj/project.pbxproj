@@ -14,7 +14,8 @@
 		A67531821A9FCAAD0015E415 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67531811A9FCAAD0015E415 /* Images.xcassets */; };
 		A67531851A9FCAAD0015E415 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67531831A9FCAAD0015E415 /* LaunchScreen.xib */; };
 		A675319D1A9FCADE0015E415 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A675319B1A9FCADE0015E415 /* Course.swift */; };
-		A6D30C5D1D8CD5F500F98D36 /* RanchForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D30C5C1D8CD5F500F98D36 /* RanchForecastTests.swift */; };
+		F9D36CEB1F019C850098223D /* CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D36CEA1F019C850098223D /* CourseTests.swift */; };
+		F9D36CED1F019D190098223D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D36CEC1F019D190098223D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 		A675318A1A9FCAAD0015E415 /* RanchForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RanchForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A675318F1A9FCAAD0015E415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A675319B1A9FCADE0015E415 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		A6D30C5C1D8CD5F500F98D36 /* RanchForecastTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RanchForecastTests.swift; sourceTree = "<group>"; };
+		F9D36CEA1F019C850098223D /* CourseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTests.swift; sourceTree = "<group>"; };
+		F9D36CEC1F019D190098223D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,9 @@
 		A675318D1A9FCAAD0015E415 /* RanchForecastTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6D30C5C1D8CD5F500F98D36 /* RanchForecastTests.swift */,
+				F9D36CEC1F019D190098223D /* Constants.swift */,
 				A675318E1A9FCAAD0015E415 /* Supporting Files */,
+				F9D36CEA1F019C850098223D /* CourseTests.swift */,
 			);
 			path = RanchForecastTests;
 			sourceTree = "<group>";
@@ -173,7 +176,7 @@
 					};
 					A67531891A9FCAAD0015E415 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = A67531741A9FCAAD0015E415;
 					};
 				};
@@ -233,7 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D30C5D1D8CD5F500F98D36 /* RanchForecastTests.swift in Sources */,
+				F9D36CEB1F019C850098223D /* CourseTests.swift in Sources */,
+				F9D36CED1F019D190098223D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -330,6 +335,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -348,7 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = RanchForecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,7 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = RanchForecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -381,6 +388,7 @@
 				INFOPLIST_FILE = RanchForecastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RanchForecast.app/RanchForecast";
 			};
@@ -390,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RanchForecastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
